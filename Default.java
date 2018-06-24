@@ -17,7 +17,7 @@ public class Default extends Item implements GildedRoseItems{
 
 	@Override
 	public void updateQualityValue() {
-		if (this.sellIn == EXPIRED_ITEM) {
+		if (this.sellIn <= EXPIRED_ITEM) {
 			this.quality -= DOUBLE_DECREASE_VALUE;
 		} else {
 			this.quality -= NORMAL_DECREASE_VALUE;
